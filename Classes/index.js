@@ -20,7 +20,7 @@ IT ALSO HAS ANOTHER PROPERTY type THAT EQUALS THE STRING 'parent class'
 */
 
 function MyFirstClass(name) {
-  // CODE HERE
+  name = 
 }
 
 /*

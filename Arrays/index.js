@@ -39,7 +39,7 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 */
 
 function pushString(arr) {
-  // CODE HERE
+  arr[arr. length] = 'last element';
   console.log(arr);
 }
 
@@ -58,7 +58,8 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 */
 
 function push(array, value) {
-  // CODE HERE
+    array[array.length] = value;
+    console.log(array);
 }
 
 /*
@@ -80,7 +81,9 @@ true
 */
 
 function printElements(array) {
-  // CODE HERE
+  for (var i = 0; i < array.length; i++){
+    console.log(array[i])
+  }
 }
 
 /*
@@ -108,8 +111,12 @@ unique([1,1,1,1,1,1]) ===> [1];
 unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
-function unique(array) {
-  // CODE HERE
+function unique(arr) {
+  arr.sort((a, b) => a - b);
+  var newarr = [arr[0]];
+  for (var i=1; i<arr.length; i++) {
+   if (arr[i]!=arr[i-1]) newarr.push(arr[i]);
+}
 }
 
 /*
@@ -125,7 +132,13 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
-  // CODE HERE
+  for (var i =0; i < array1.length; i++){
+    for (var j = 0; j < array2/length; j++){
+    }
+    if (array1[i] === array2[j]){
+      return true;
+    } else {return false;}
+  }
 }
 
 /*
