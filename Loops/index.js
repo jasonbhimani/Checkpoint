@@ -77,13 +77,14 @@ e.g. indexOf('hello', 'l') ===> 2
 */
 
 function indexOf(str, char) {
- for (var i = 0; i < str.length; i++){
-   if (str[i] === char){
-     return i;
-   }
-   else return -1;
- }
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
 }
+
 
 /*
 QUESTION 5
@@ -114,17 +115,21 @@ FizzBuzz
 */
 
 function fizzBuzz(num) {
-  if (num % 3 === 0 && num % 5 === 0){
-    return console.log('FizzBuzz')
-  }
-  if (num % 3 === 0){
-    return console.log('Fizz')
-  }
-  if (num % 5 === 0){
-    return console.log('Buzz')
-  }
-  else{
-    return console.log(num)
+  for (var i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+      continue;
+    }
+    if (i % 3 === 0) {
+      console.log("Fizz");
+      continue;
+    }
+    if (i % 5 === 0) {
+      console.log("Buzz");
+      continue;
+    } else {
+      console.log(i);
+    }
   }
 }
 

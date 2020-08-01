@@ -39,8 +39,8 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 */
 
 function pushString(arr) {
-  arr[arr. length] = 'last element';
-  console.log(arr);
+  arr[arr.length] = "last element";
+  return arr;
 }
 
 /*
@@ -59,7 +59,7 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 function push(array, value) {
     array[array.length] = value;
-    console.log(array);
+   return array;
 }
 
 /*
@@ -112,12 +112,15 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(arr) {
-  arr.sort((a, b) => a - b);
-  var newarr = [arr[0]];
-  for (var i=1; i<arr.length; i++) {
-   if (arr[i]!=arr[i-1]) newarr.push(arr[i]);
+  const newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    if(newArr.includes(arr[i]) === false){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
 }
-}
+
 
 /*
 QUESTION 5
@@ -132,13 +135,14 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
-  for (var i =0; i < array1.length; i++){
-    for (var j = 0; j < array2/length; j++){
+  for (var i = 0; i < array1.length; i++) {
+    for (var j = 0; j < array2.length; j++) {
+      if (array1[i] == array2[j]) {
+        return true;
+      }
     }
-    if (array1[i] === array2[j]){
-      return true;
-    } else {return false;}
   }
+  return false;
 }
 
 /*
@@ -154,7 +158,15 @@ compareArrays([1, 2, 3, 4], [1, 2]) ====> [1, 2]
 */
 
 function compareArrays(array1, array2) {
-  // CODE HERE
+  let arr = [];
+  for (var i = 0; i < array1.length; i++) {
+    for (var j = 0; j < array2.length; j++) {
+      if (array1[i] == array2[j]) {
+        arr.push(array2[j]);
+      }
+    }
+  }
+  return arr;
 }
 
 /*
@@ -169,7 +181,13 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 */
 
 function compareArraysOpposite(array1, array2) {
-  // CODE HERE
+  let arr = [];
+  for (var i = 0; i < array1.length; i++) {
+    if (!array2.includes(array1[i])) {
+      arr.push(array1[i]);
+    }
+  }
+  return arr;
 }
 
 /*
@@ -194,7 +212,7 @@ retrieveValue(twoDimentionArray, 3, 1) ===> 1
 */
 
 function retrieveValue(arr, row, col) {
-  // CODE HERE
+  return arr[row][col];
 }
 
 /*
@@ -224,8 +242,15 @@ createTwoDArray(3, 5) ===> [
 */
 
 function createTwoDArray(row, col) {
-  // CODE HERE
-}
+    let newArr = [];
+    for (var i = 0; i < row; i++) {
+     newArr[i] = [];
+      for (var j = 0; j < col; j++) {
+       newArr[i][j] = 0;
+      }
+    }
+    return newArr;
+  }
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH

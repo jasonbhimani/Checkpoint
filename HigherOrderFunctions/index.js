@@ -40,7 +40,9 @@ USE A FOR-LOOP
 */
 
 function forEach(array, callback) {
-callback(array[i])
+  for (var i = 0; i < array.length; i++) {
+  callback(array[i])
+  }
 }
 
 /*
@@ -56,7 +58,11 @@ USE A FOR-LOOP
 */
 
 function map(array, callback) {
-  // CODE HERE
+  var res = [];
+  for (var i = 0; i < array.length; i++) {
+    res.push(callback(array[i]));
+  }
+  return res;
 }
 
 /*

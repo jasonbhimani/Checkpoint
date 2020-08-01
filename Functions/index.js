@@ -71,7 +71,8 @@ concatQuestion('blake') ===> 'hello blake'
 */
 
 function concatQuestion(str) {
-  return "Hello " + str;
+  var string = "hello " + str;
+  return string
 }
 
 /*
@@ -136,11 +137,10 @@ e.g.
 var answerToQuestion8;
 
 function question8() {
-  return 'we can save the return values in variables'
+  var sent = "we can save return values in variables";
+  return sent
 }
-
 answerToQuestion8 = question8();
-return answerToQuestion8;
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
